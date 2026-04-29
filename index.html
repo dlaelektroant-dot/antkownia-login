@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AntkowniaGG - logowanie</title>
+<title>AntkowniaGG - główna</title>
 
 </body>
 </html>
@@ -14,7 +14,107 @@ body {
     background: #000000;
     color: white;
     text-align: center;
-    <section>
+}
+
+/* 🌈 NEON HEADER */
+@keyframes neonMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+header {
+    padding: 60px 20px;
+    background: linear-gradient(270deg,
+        #00ffff,
+        #ff00ff,
+        #00ff66,
+        #ffcc00,
+        #00ffff
+    );
+    background-size: 1000% 1000%;
+    animation: neonMove 18s ease infinite;
+    box-shadow: 0 0 40px #0ff;
+}
+
+h1 {
+    font-size: 55px;
+    text-shadow: 0 0 10px #0ff, 0 0 30px #f0f, 0 0 60px #0ff;
+    margin: 0;
+}
+
+.server-ip {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #000;
+    font-weight: bold;
+}
+
+/* BUTTONS */
+.btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 20px;
+    border: 2px solid #0ff;
+    color: #0ff;
+    text-decoration: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #0ff;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #0ff;
+    color: black;
+    box-shadow: 0 0 25px #0ff;
+}
+
+section {
+    padding: 40px;
+}
+
+.server-img {
+    width: 70%;
+    max-width: 650px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px #0ff;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    color: gray;
+    font-size: 14px;
+}
+
+.small {
+    font-size: 12px;
+    color: #777;
+}
+
+/* INFO BOX */
+.ip-box {
+    margin-top: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>⚡ ANTKOWNIA GG ⚡</h1>
+    <div class="server-ip">
+        IP: antkowniaGG.ddns.net | Minecraft 1.21.4 | SURVIVAL
+    </div>
+
+    <div class="ip-box">
+        <button class="btn" onclick="copyIP()">📋 Kopiuj IP</button>
+        <p id="copyText" class="small"></p>
+    </div>
+</header>
+
+<section>
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,7 +129,7 @@ body {
 
 <button onclick="zaloguj()">Zaloguj</button>
 
-<script>
+<!--<script>
 function zaloguj() {
   let l = document.getElementById("login").value;
   let h = document.getElementById("haslo").value;
@@ -40,5 +140,61 @@ function zaloguj() {
     alert("Zły login lub hasło!");
   }
 }
-</script>
+</script> -->
 
+<section>
+    <h2>🌐 Linki</h2>
+   <!-- <a class="btn" href="https://www.youtube.com/@Antgg-i4t" target="_blank">YouTube</a> -->
+    <p>        <p/>
+<a class="btn" href="https://dlaelektroant-dot.github.io/antkowniahtml.creators/" target="_blank">twórcy</a>
+<!--<img src="cms.png"> -->
+</section>
+
+<section>
+    <h2>historia serwera</h2>
+    <p>28 marca 2026 Antek stworzył serwer<p/>
+    <p>28 kwietnia Antek napisał stronę<p/>
+</section>
+<footer>
+<p>© 2026 Antkownia GG. Wszelkie prawa zastrzeżone.</p>
+<a href="https://youtu.be/hSN6-AMdDOo?si=uzdRvOy4jJmGEV8F">dla niekumających nie można podrabiać strony</a>
+</footer>
+
+<script>
+function copyIP() {
+    const ip = "antkowniaGG.ddns.net";
+
+    navigator.clipboard.writeText(ip).then(() => {
+        document.getElementById("copyText").innerText = "✔ IP skopiowane!";
+    }).catch(() => {
+        document.getElementById("copyText").innerText = "❌ Nie udało się skopiować";
+    });
+}
+</script>
+<script>
+let clicks = 0;
+
+document.addEventListener("click", () => {
+    clicks++;
+
+    if (clicks === 6) {
+        alert("chcesz klucze? /egg ");
+    }
+});
+</script>
+<script>
+document.addEventListener("keydown", function(e) {
+    const key = e.key.toLowerCase();
+
+    // ALT + C lub CTRL + C
+    if ((e.altKey || e.ctrlKey) && key === "c") {
+        e.preventDefault(); // blokuje domyślne akcje
+
+        // spróbuj nowa karta
+        const win = window.open("https://www.youtube.com", "_blank");
+        }
+    }
+});
+</script>
+</body>
+</html> 
