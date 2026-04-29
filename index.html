@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AntkowniaGG - główna</title>
+<title>AntkowniaGG - login</title>
 
 </body>
 </html>
@@ -16,12 +16,6 @@ body {
     text-align: center;
 }
 
-/* 🌈 NEON HEADER */
-@keyframes neonMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
 
 header {
     padding: 60px 20px;
@@ -43,11 +37,6 @@ h1 {
     margin: 0;
 }
 
-.server-ip {
-    margin-top: 10px;
-    font-size: 18px;
-    color: #000;
-    font-weight: bold;
 }
 
 /* BUTTONS */
@@ -102,17 +91,7 @@ footer {
 
 <body>
 
-<header>
-    <h1>⚡ ANTKOWNIA GG ⚡</h1>
-    <div class="server-ip">
-        IP: antkowniaGG.ddns.net | Minecraft 1.21.4 | SURVIVAL
-    </div>
 
-    <div class="ip-box">
-        <button class="btn" onclick="copyIP()">📋 Kopiuj IP</button>
-        <p id="copyText" class="small"></p>
-    </div>
-</header>
 
 <section>
 <!DOCTYPE html>
@@ -129,7 +108,7 @@ footer {
 
 <button onclick="zaloguj()">Zaloguj</button>
 
-<!--<script>
+<script>
 function zaloguj() {
   let l = document.getElementById("login").value;
   let h = document.getElementById("haslo").value;
@@ -140,15 +119,8 @@ function zaloguj() {
     alert("Zły login lub hasło!");
   }
 }
-</script> -->
+</script> 
 
-<section>
-    <h2>🌐 Linki</h2>
-   <!-- <a class="btn" href="https://www.youtube.com/@Antgg-i4t" target="_blank">YouTube</a> -->
-    <p>        <p/>
-<a class="btn" href="https://dlaelektroant-dot.github.io/antkowniahtml.creators/" target="_blank">twórcy</a>
-<!--<img src="cms.png"> -->
-</section>
 
 <section>
     <h2>historia serwera</h2>
@@ -157,43 +129,8 @@ function zaloguj() {
 </section>
 <footer>
 <p>© 2026 Antkownia GG. Wszelkie prawa zastrzeżone.</p>
-<a href="https://youtu.be/hSN6-AMdDOo?si=uzdRvOy4jJmGEV8F">dla niekumających nie można podrabiać strony</a>
 </footer>
 
-<script>
-function copyIP() {
-    const ip = "antkowniaGG.ddns.net";
-
-    navigator.clipboard.writeText(ip).then(() => {
-        document.getElementById("copyText").innerText = "✔ IP skopiowane!";
-    }).catch(() => {
-        document.getElementById("copyText").innerText = "❌ Nie udało się skopiować";
-    });
-}
-</script>
-<script>
-let clicks = 0;
-
-document.addEventListener("click", () => {
-    clicks++;
-
-    if (clicks === 6) {
-        alert("chcesz klucze? /egg ");
-    }
-});
-</script>
-<script>
-document.addEventListener("keydown", function(e) {
-    const key = e.key.toLowerCase();
-
-    // ALT + C lub CTRL + C
-    if ((e.altKey || e.ctrlKey) && key === "c") {
-        e.preventDefault(); // blokuje domyślne akcje
-
-        // spróbuj nowa karta
-        const win = window.open("https://www.youtube.com", "_blank");
-        }
-    }
 });
 </script>
 </body>
